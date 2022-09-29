@@ -20,7 +20,7 @@ public class Exercicio10 {
         double mediaAproveitamento = 0.0;
         String conceito = "";
 
-        mediaAproveitamento = (notaAv1+notaAv2+notaAv3+mediaExercicios)/7;
+        mediaAproveitamento = (notaAv1+(notaAv2*2)+(notaAv3*3)+mediaExercicios)/7;
 
         if(mediaAproveitamento>=9.0){
             conceito = "A";
