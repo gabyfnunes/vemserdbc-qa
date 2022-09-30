@@ -2,34 +2,61 @@ import java.util.Scanner;
 
 public class Exercicio3 {
     public static void main(String[] args) {
-        Scanner leitorUsuario = new Scanner(System.in);
-        System.out.println("Informe o Nome do jogador: ");
-        String nome = leitorUsuario.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        String nome;
+        String maiorPeso = "";
+        String maiorIdade = "";
+        double altura;
+        double peso;
+        double auxAltura = 0;
+        double maiorAltura = 0;
+        double mediaAltura = 0;
+        double auxPeso = 0;
+        int contagemJogadores = 0;
+        int idade;
+        int auxIdade = 0;
 
-        while (nome!="sair") {
-                System.out.println("Informe o Nome do jogador: ");
-                nome = leitorUsuario.nextLine();
-                System.out.println("Informe a idade do jogador: ");
-                int idade = leitorUsuario.nextInt();
-                leitorUsuario.nextLine();
-                System.out.println("Informe a altura do jogador: ");
-                double altura = leitorUsuario.nextDouble();
-                System.out.println("Por fim, informe o peso do jogador: ");
-                double peso = leitorUsuario.nextDouble();
-                leitorUsuario.nextLine();
-
-                for (int i = 0; i == 100; i++) {
-                    double vetoresNumericos[] = {altura, peso, (double) idade};
-                    System.out.println(vetoresNumericos[i]);
-                }
-
+        do {
+            System.out.println("Preencha os dados a baixo:  (Para sair digite: SAIR)");
+            System.out.println("Nome: ");
+            nome = scanner.nextLine();
+            if (nome.equals("SAIR")){
+                break;
             }
-        if (nome=="sair"){
-            System.out.println("cabou");
+            System.out.println("Altura: ");
+            altura = scanner.nextDouble();
+            System.out.println("Idade: ");
+            idade = scanner.nextInt();
+            System.out.println("Peso: ");
+            peso = scanner.nextDouble();
+
+            if (altura > maiorAltura){
+                maiorAltura = altura;
+            }
+            if(idade > auxIdade){
+                auxIdade = idade;
+                maiorIdade = nome;
+            }
+            if (peso > auxPeso){
+                auxPeso = peso;
+                maiorPeso = nome;
+            }
+
+            auxAltura += altura;
+            contagemJogadores++;
+            scanner.nextLine();
+        }while (!nome.equals("SAIR"));
+
+        if (contagemJogadores != 0){
+            mediaAltura = auxAltura / contagemJogadores;
         }
 
-        }
-        }
+        System.out.println("Quantidade de jogadores cadastrados: "+contagemJogadores);
+        System.out.println("Altura do maior jogador: "+maiorAltura);
+        System.out.println("Jogador mais velho: "+maiorIdade);
+        System.out.println("Jogador mais pesado: "+maiorPeso);
+        System.out.printf("Média das alturas dos jogadores: %.2f",mediaAltura);
 
-
-
+        scanner.close();
+    }
+}
