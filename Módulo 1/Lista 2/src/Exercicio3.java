@@ -45,6 +45,7 @@ public class Exercicio3 {
             auxAltura += altura;
             contagemJogadores++;
             scanner.nextLine();
+
         }while (!nome.equals("SAIR"));
 
         if (contagemJogadores != 0){
