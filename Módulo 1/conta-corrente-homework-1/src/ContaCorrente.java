@@ -10,7 +10,7 @@ public class ContaCorrente {
                 "\nAgência: "+agencia+"\nSaldo Disponível: "+ saldo+"\nLimite Cheque Especial: "+chequeEspecial);
     }
     public boolean sacar (double valorSaque){
-        if (valorSaque>(saldo+chequeEspecial) && valorSaque>0){
+        if (valorSaque<(saldo+chequeEspecial) && valorSaque>0){
             double valorAtual = (saldo+chequeEspecial)-valorSaque;
             saldo = valorAtual;
         }

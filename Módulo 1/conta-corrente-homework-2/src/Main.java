@@ -21,7 +21,7 @@ public class Main {
 
         //Transferência João para Maria:
         boolean transferenciaJoao;
-        transferenciaJoao = contaCorrenteJoao.transferir(contaPoupancaMaria,10.00);
+        transferenciaJoao = contaCorrenteJoao.transferir(contaPoupancaMaria,0.00);
         System.out.println("\nJoão transferiu R$10,00 para Maria. As contas ficaram assim:\n ");
         contaCorrenteJoao.imprimir();
         System.out.println("\n");

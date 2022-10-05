@@ -17,8 +17,6 @@ abstract class Conta implements Movimentacao {
     }
 
     //Getters and Setters:
-
-
     public Cliente getCliente() {
         return cliente;
     }
@@ -51,6 +49,7 @@ abstract class Conta implements Movimentacao {
         this.saldo = saldo;
     }
 
+
     //Métodos:
     @Override
     public boolean sacar(double valorSaque) {
@@ -72,7 +71,6 @@ abstract class Conta implements Movimentacao {
             System.out.println("Não é possivel depositar valores negativos.");
             return false;
         }
-
         setSaldo(getSaldo() + valorDeposito);
         return true;
     }

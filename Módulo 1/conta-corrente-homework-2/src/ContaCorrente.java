@@ -5,6 +5,13 @@ public class ContaCorrente extends Conta implements Impressao {
     public ContaCorrente() {
 
     }
+
+    //Getters and Setter:
+
+    public double getChequeEspecial() {
+        return chequeEspecial;
+    }
+
     //Métodos:
 
     public ContaCorrente(Cliente cliente, String numeroConta, String agencia, double saldo, double chequeEspecial) {
@@ -18,21 +25,22 @@ public class ContaCorrente extends Conta implements Impressao {
         return this.getSaldo() + chequeEspecial;
     }
 
+    //Métodos:
     public void setChequeEspecial(double chequeEspecial) {
         this.chequeEspecial = chequeEspecial;
     }
 
-    public boolean sacar(double valorSaque) {
-        double saldoAtual = getSaldo();
-        if (valorSaque > (saldoAtual + chequeEspecial) && valorSaque > 0) {
-            double valorAtual = (saldoAtual + chequeEspecial) - valorSaque;
-
-        } else {
-            System.out.println("Saldo insuficiente. Saque não permitido.");
+    @Override
+    public boolean sacar (double valorSaque){
+        if (valorSaque>0){
+            return false;
         }
+        if((valorSaque >=retornarValorComChequeEspecial())){
+            return true;
+        }
+        setSaldo(getSaldo()-valorSaque);
         return true;
     }
-
     @Override
     public void imprimir(){
         System.out.println("Conta Corrente:\n" +

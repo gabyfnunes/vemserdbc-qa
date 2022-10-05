@@ -93,19 +93,20 @@ public class Endereco {
     //Métodos:
     public void imprimirEndereco() {
         String tipoEndereco;
+        if(getTipo()!=0) {
             if (tipo == 1) {
                 tipoEndereco = "Residencial";
-                System.out.println ("Logradouro: "+logradouro+"  "+numero+" "+complemento+" - "+cep+" - "
-                +cidade+", "+estado+", "+pais+" ( "+tipoEndereco+" ).");
+                System.out.println("Logradouro: " + logradouro + "  " + numero + " " + complemento + " - " + cep + " - "
+                        + cidade + ", " + estado + ", " + pais + " ( " + tipoEndereco + " ).");
 
             }
             if (tipo == 2) {
                 tipoEndereco = "Comercial";
-                System.out.println ("Logradouro: "+logradouro+"  "+numero+" "+complemento+" - "+cep+" - "
-                        +cidade+", "+estado+", "+pais+" ( "+tipoEndereco+" ).");
+                System.out.println("Logradouro: " + logradouro + "  " + numero + " " + complemento + " - " + cep + " - "
+                        + cidade + ", " + estado + ", " + pais + " ( " + tipoEndereco + " ).");
             } else {
                 System.out.println("Os tipos permitidos é somente RESIDENCIAL(1) ou COMERCIAL(2).");
             }
-
         }
+    }
 }

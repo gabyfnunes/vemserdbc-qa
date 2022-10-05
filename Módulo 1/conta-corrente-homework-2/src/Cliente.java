@@ -37,18 +37,42 @@ public class Cliente{
         this.cpf = cpf;
     }
 
+    public Contato[] getContatos() {
+        return contatos;
+    }
+
+    public void setContatos(Contato[] contatos) {
+        this.contatos = contatos;
+    }
+
+    public Endereco[] getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(Endereco[] enderecos) {
+        this.enderecos = enderecos;
+    }
 
     //Métodos:
    public void imprimirContato() {
-       if (contato != null) {
-           contato.imprimirContato();
+       if (contatos != null) {
+           for (int i =0; i < contatos.length; i++){
+               if(contatos[i]!=null){
+                   contatos[i].imprimirContato();
+               }
+           }
        }
    }
    public void imprimirEnderecos() {
-           if (endereco != null) {
-               endereco.imprimirEndereco();
+           if (enderecos != null) {
+               for (int i = 0; i <enderecos.length; i++){
+                   if (enderecos[i]!=null){
+                       enderecos[i].imprimirEndereco();
+                   }
+               }
            }
        }
+
     public void imprimirCliente(){
         System.out.println("Nome: "+nome+"\nCPF: "+cpf);
     }
