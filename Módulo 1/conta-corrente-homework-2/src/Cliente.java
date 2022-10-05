@@ -2,10 +2,7 @@ public class Cliente{
     private String nome;
     private String cpf;
     private Contato contatos[] = new Contato[2];
-    private Contato contato = new Contato();
     private Endereco enderecos[] = new Endereco[2];
-
-    private Endereco endereco = new Endereco();
 
     //Construtores:
     public Cliente(){
