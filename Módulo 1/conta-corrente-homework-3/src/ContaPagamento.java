@@ -32,6 +32,7 @@ public class ContaPagamento extends Conta implements Impressao {
             conta.depositar(valor);
             return true;
         }else {
+            System.out.println("Não foi possível transferir. ");
             return false;
         }
     }
