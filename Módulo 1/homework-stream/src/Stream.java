@@ -54,6 +54,7 @@ public class Stream {
         List<Integer> idsPessoas = lista.stream()
                 .map(Pessoa::getId)
                 .toList();
+        System.out.println(idsPessoas);
 
         //7- criar uma nova classe Salario com ID e Salário, utilizando a função "map" do stream, retornar uma lista desse novo objeto
         System.out.println("\n\n7-Criar uma nova classe Salario com ID e Salário, utilizando a função 'map' do stream, retornar uma lista desse novo objeto: ");
@@ -77,12 +78,15 @@ public class Stream {
         //    Imprimir o nome e salário dessa pessoa
         System.out.println("\n\n10- verificar se tem alguém que contenha o nome 'Paulo' (containsignorecase) na lista e retornar o primeiro elemento que encontrar (findFirst):");
         Optional<Pessoa> nome = lista.stream()
-                .filter(pessoa -> pessoa.getNome() == "Paulo")
+                .filter(pessoa -> pessoa.getNome().toLowerCase().contains("paulo"))
                 .findFirst();
 
         if (nome.isPresent()){
             System.out.println("Nome: "+nome.get().getNome());
             System.out.println("Salário :"+nome.get().getSalario());
+        }
+        else {
+            System.out.println("Não foi encontrado. ");
         }
     }
 
