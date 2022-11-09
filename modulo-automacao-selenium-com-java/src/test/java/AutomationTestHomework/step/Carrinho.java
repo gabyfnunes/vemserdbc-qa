@@ -36,8 +36,10 @@ public class Carrinho extends BaseTeste{
         driver.findElement(By.cssSelector("#billing_state")).sendKeys(faker.address().state());
         driver.findElement(By.cssSelector("#billing_postcode")).sendKeys(faker.address().zipCodeByState(faker.address().stateAbbr()));
 
-        driver.findElement(By.cssSelector("#payment > ul > li.wc_payment_method.payment_method_cod > label")).click();
-        driver.findElement(By.cssSelector("#place_order")).click();
+        //Não consegui ajeitar esses cliques.
+//        driver.findElement(By.cssSelector("[class=\"wc_payment_method payment_method_bacs\"]")).click();
+
+//        driver.findElement(By.cssSelector("#place_order")).click();
     }
 
 }

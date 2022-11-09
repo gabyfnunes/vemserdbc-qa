@@ -14,13 +14,14 @@ public class Orders extends BaseTeste{
         driver.findElement(By.cssSelector("[name=\"login\"]")).click();
     }
 
-//    @Test
-//    public void quandoNaoHouverPedidos(){
-//        login();
-//        driver.findElement(By.cssSelector("#page-36 > div > div.woocommerce > nav > ul > li.woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--orders.is-active > a")).click();
-//
-////        String validacaoPedidos = driver.findElement(By.cssSelector("#page-36 > div > div.woocommerce > div > div")).getText();
-////        Assert.assertEquals(validacaoPedidos, "No order has been made yet.");
-//
-//    }
+    @Test
+    public void quandoNaoHouverPedidos(){
+        login();
+        driver.findElement(By.cssSelector("[href=\"https://practice.automationtesting.in/my-account/orders/\"]")).click();
+
+        String validacaoPedidos = driver.findElement(By.cssSelector("#page-36 > div > div.woocommerce > div > div")).getText();
+        Assert.assertEquals(validacaoPedidos, "GO SHOP\n" +
+                "No order has been made yet.");
+
+    }
 }
