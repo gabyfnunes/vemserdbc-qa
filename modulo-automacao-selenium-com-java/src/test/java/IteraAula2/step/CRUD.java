@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import java.util.concurrent.TimeUnit;
 
 public class CRUD extends BaseTeste {
 
@@ -73,7 +72,7 @@ public class CRUD extends BaseTeste {
     public void buscarPessoa(){
         login();
         driver.findElement(By.cssSelector("[id=\"searching\"]")).sendKeys("Regina Phalange");
-        driver.findElement(By.cssSelector("[value=\"Search\"")).click();
+        driver.findElement(By.cssSelector("[value=\"Search\"]")).click();
 
         String verificacaoBusca = driver.findElement(By.cssSelector("body > div > div > table > tbody > tr:nth-child(2) > td:nth-child(1)")).getText();
         Assert.assertEquals(verificacaoBusca, "Regina Phalange");
@@ -85,7 +84,7 @@ public class CRUD extends BaseTeste {
         login();
 
         driver.findElement(By.cssSelector("[id=\"searching\"]")).sendKeys("Taylor Swift");
-        driver.findElement(By.cssSelector("[value=\"Search\"")).click();
+        driver.findElement(By.cssSelector("[value=\"Search\"]")).click();
 
         String teste = driver.findElement(By.cssSelector("body > div > div > table > tbody > tr:nth-child(2) > td")).getText();
 
