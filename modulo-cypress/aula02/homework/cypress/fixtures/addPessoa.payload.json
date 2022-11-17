@@ -1,0 +1,20 @@
+[
+  {
+      "nome": "Phoebe Buffey",
+      "dataNascimento": "1994-12-08",
+      "cpf": "36985212",
+      "email": "pheebs.buffey@email.com.br"
+  }, 
+  {
+      "nome": "Ross Geller",
+      "dataNascimento": "1985-07-08",
+      "cpf": "968741289",
+      "email": "dino.ross@email.com.br"
+  },
+  {
+      "nome": "Joseph Tribbiani",
+      "dataNascimento": "1998-02-10",
+      "cpf": "7784822845",
+      "email": "joe.tribbiani@email.com.br"
+  }
+]

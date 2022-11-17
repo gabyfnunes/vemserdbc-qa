@@ -1,0 +1,24 @@
+[
+    {
+        "idPessoa": 128,
+        "tipo": "COMERCIAL",
+        "logradouro": "Quadra 116251 conj 45",
+        "numero": 23,
+        "complemento": "Condomínio",
+        "cep": "587121352444",
+        "cidade": "Rua dos Bobos",
+        "estado": "SP",
+        "pais": "Brasil"
+    },
+    {
+        "idPessoa": 2258,
+        "tipo": "Residencial",
+        "logradouro": "Casa muito engracada",
+        "numero": 0,
+        "complemento": "nao sei, acabou a criatividade",
+        "cep": "74952588",
+        "cidade": "Itapoã",
+        "estado": "BA",
+        "pais": "Brasil"
+    }
+]
