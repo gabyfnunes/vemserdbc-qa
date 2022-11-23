@@ -1,0 +1,20 @@
+{
+  "name": "homework1front",
+  "version": "1.0.0",
+  "main": "index.js",
+    "scripts": {
+        "test:chrome": "cypress run --browser chrome --no-exit"
+    },
+    "cypress-cucumber-preprocessor": {
+        "step_definitions": "cypress/support/steps"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^9.5.4",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "description": ""
+}
